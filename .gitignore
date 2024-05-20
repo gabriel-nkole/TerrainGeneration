@@ -1,0 +1,10 @@
+.vs/
+.vsconfig
+Assembly-CSharp.csproj
+Library/
+Logs/
+Screenshot_1.png
+Screenshot_2.png
+Temp/
+Terrain Generation.sln
+obj/

@@ -1,0 +1,39 @@
+#include "$noise-simplex/noiseSimplex.cginc"
+
+#pragma kernel PerlinNoise
+#pragma kernel NoiseScaling
+
+RWStructuredBuffer<float> NoiseBuffer;
+uniform const uint _Size;
+uniform const float _Frequency;
+uniform const int _Octaves;
+uniform const float _Persistence;
+uniform const float _Lacunarity;
+
+uniform const float _MaxNoise;
+RWTexture2D<float4> GeneratedHeightMap;
+
+[numthreads(8,8,1)]
+void PerlinNoise (uint3 id : SV_DispatchThreadID){
+    float2 uv = float2(id.x, id.y) / float(_Size);
+    
+    float frequency = _Frequency;
+    float noiseSum = 0;
+    float amplitude = 1;
+    for (int o = 0; o < _Octaves; o++){
+        noiseSum += amplitude * saturate(snoise(uv*frequency));
+
+        amplitude *= _Persistence;
+        frequency *= _Lacunarity;
+    }
+
+    uint idx = id.y*_Size + id.x;
+    NoiseBuffer[idx] = noiseSum;
+}
+
+[numthreads(8,8,1)]
+void NoiseScaling (uint3 id : SV_DispatchThreadID){
+    float scaledNoise = NoiseBuffer[id.y*_Size + id.x] / max(_MaxNoise, 0.0001);
+    //scaledNoise = clamp(scaledNoise * 2 - 1, 0, 1);
+    GeneratedHeightMap[id.xy] = float4(scaledNoise, scaledNoise, scaledNoise, scaledNoise);
+}
