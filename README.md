@@ -9,7 +9,8 @@ Terrain generation with Fractal Perlin Noise.
 ## Screenshots
 ![Screenshot_1](https://github.com/gabriel-nkole/TerrainGeneration/assets/101514971/02ea50b7-4c82-4057-9c45-86bb097e1208)
 ![Screenshot_2](https://github.com/gabriel-nkole/TerrainGeneration/assets/101514971/40470258-428f-4707-b17a-d76830cd3e4f)
-![Editor_NoFPSCounter](https://github.com/gabriel-nkole/TerrainGeneration/assets/101514971/3a1389bb-84a5-48a5-ac95-d631a4434fb2)
 ![Editor_FPSCounter](https://github.com/gabriel-nkole/TerrainGeneration/assets/101514971/f40b20f7-e932-4f4d-95b3-125158eb140f)
+![Editor_FPSCounter2](https://github.com/gabriel-nkole/TerrainGeneration/assets/101514971/0550279d-436f-4b75-9902-9ee07cc20056)
+![Editor_NoFPSCounter](https://github.com/gabriel-nkole/TerrainGeneration/assets/101514971/3a1389bb-84a5-48a5-ac95-d631a4434fb2)
 ![Editor2_NoFPSCounter](https://github.com/gabriel-nkole/TerrainGeneration/assets/101514971/d806b043-f609-4040-979e-21bb4a2c10f1)
 
