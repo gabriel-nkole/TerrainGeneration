@@ -4,7 +4,7 @@ by Gabriel Nkole
 ## Description
 Terrain generation with Fractal Perlin Noise.
 - Sample height map textures obtained from: https://acegikmo.com/storage/futuregames/ShaderCourseAssets.unitypackage.
-- HLSL Simplex Noise Library obtained from: https://forum.unity.com/threads/2d-3d-4d-optimised-perlin-noise-cg-hlsl-library-cginc.218372/  
+- HLSL Simplex Noise library obtained from: https://forum.unity.com/threads/2d-3d-4d-optimised-perlin-noise-cg-hlsl-library-cginc.218372/  
 
 ## Screenshots
 ![Screenshot_1](https://github.com/gabriel-nkole/TerrainGeneration/assets/101514971/02ea50b7-4c82-4057-9c45-86bb097e1208)
