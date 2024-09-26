@@ -54,8 +54,8 @@ public class TerrainScript : MonoBehaviour {
         GeneratedHeightMap = new RenderTexture((int)Size, (int)Size, 0);
 
         if (Generated) {
-            int threadGroupsX = Mathf.CeilToInt(Size / LOCAL_WORK_GROUPS_X);
-            int threadGroupsY = Mathf.CeilToInt(Size / LOCAL_WORK_GROUPS_Y);
+            int threadGroupsX = Mathf.CeilToInt((float)Size / (float)LOCAL_WORK_GROUPS_X);
+            int threadGroupsY = Mathf.CeilToInt((float)Size / (float)LOCAL_WORK_GROUPS_Y);
 
             GeneratedHeightMap.wrapMode = TextureWrapMode.Clamp;
             GeneratedHeightMap.enableRandomWrite = true;
